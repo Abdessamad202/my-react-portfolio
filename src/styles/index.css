@@ -510,25 +510,37 @@ a {
 }
 
 .collaborate-card h1 {
-  font-size: 3.5rem;
   font-weight: 700;
-  margin-bottom: 0.5rem;
+  text-transform: capitalize;
   color: white;
 }
+.collaborate-card p {
+  color: rgba(255, 255, 255, 0.8);
+  font-size: 1.1rem;
+  line-height: 1.5;
+  margin-bottom: 0;
+}
+@media (width >= 375px) {
+  .collaborate-card h1 {
+    font-size: 3.5rem;
+    margin-bottom: 0.5rem;
+  }
 
+}
+@media (width < 375px) {
+  .collaborate-card h1 {
+    font-size: 2.5rem;
+  }
+.collaborate-card p {
+  font-size: 1rem;
+  }
+}
 .collaborate-card .accent-text {
   color: #8257e6;
 }
 
 .collaborate-card:hover .accent-text {
   color: white;
-}
-
-.collaborate-card p {
-  color: rgba(255, 255, 255, 0.8);
-  font-size: 1.1rem;
-  line-height: 1.5;
-  margin-bottom: 0;
 }
 
 .arrow-icon {
