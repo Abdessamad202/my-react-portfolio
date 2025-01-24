@@ -10,6 +10,9 @@ import { Tools } from './pages/Tools.jsx';
 import { Contact } from './pages/Contact.jsx';
 import { Projects } from './pages/Projects.jsx';
 import { useEffect } from 'react';
+import { Wrapper } from './components/Content.jsx';
+import { Profile } from './components/Profile.jsx';
+import { Navbar } from './components/Navbar.jsx';
 
 const App = () => {
     const location = useLocation();
@@ -20,15 +23,23 @@ const App = () => {
     }, [location]);
 
     return (
-        <div className="App">
-            <Routes>
+        <>
+      <Navbar />
+      <div className="container ">
+        <div className="row ">
+          <Profile />
+          <Wrapper>
+          <Routes>
                 {/* Define the routes in a simpler structure */}
                 <Route path="/" element={<Home />} />
                 <Route path="/tools" element={<Tools />} />
                 <Route path="/projects" element={<Projects />} />
                 <Route path="/contact" element={<Contact />} />
             </Routes>
+          </Wrapper>
         </div>
+      </div>
+    </>
     );
 }
 
