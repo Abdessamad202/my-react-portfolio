@@ -1,4 +1,4 @@
-@import url('https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&family=Outfit:wght@100..900&family=Quicksand:wght@300..700&family=Ubuntu:ital,wght@0,300;0,400;0,500;0,700;1,300;1,400;1,500;1,700&display=swap');
+@import url("https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&family=Outfit:wght@100..900&family=Quicksand:wght@300..700&family=Ubuntu:ital,wght@0,300;0,400;0,500;0,700;1,300;1,400;1,500;1,700&display=swap");
 :root {
   --background-color: #1a1a1a;
   --nav-bg-color: #333;
@@ -34,8 +34,10 @@ body {
   }
 }
 /* Utility Classes */
-.mt-100 {
-  margin-top: 100px;
+@media (min-width: 991px) {
+  .mt-md-100 {
+    margin-top: 100px;
+  }
 }
 .mb-100 {
   margin-bottom: 100px !important;
@@ -225,7 +227,11 @@ body {
   color: #fff;
   font-weight: 600;
 }
-
+@media (min-width: 1024px) {
+  .hero__content h1 {
+    margin: 100px 0 0 0;
+  }
+}
 .hero__content h1 span {
   color: var(--active-hover-color);
 }
@@ -338,31 +344,35 @@ a {
   font-weight: 600;
   color: #fff;
   padding: 20px;
-  margin-top: 50px;
 }
 
 /* Tablet (between 768px and 1024px) */
-@media (max-width: 1024px) {
+@media (min-width: 992px) {
   .header {
-    font-size: 40px;  /* Adjust font size for tablet */
-    margin-top: 40px;  /* Adjust margin */
+    margin: 100px 0 0 0;
+  }
+}
+@media (max-width: 991px) {
+  .header {
+    text-align: center;
+    font-size: 40px; /* Adjust font size for tablet */
+    margin-top: 40px; /* Adjust margin */
   }
 }
 
 /* Mobile (between 480px and 768px) */
 @media (max-width: 768px) {
   .header {
-    text-align: center;
-    font-size: 30px;  /* Adjust font size for mobile */
-    margin-top: 30px;  /* Adjust margin */
+    font-size: 30px; /* Adjust font size for mobile */
+    margin-top: 30px; /* Adjust margin */
   }
 }
 
 /* Very Small Screens (less than 480px) */
 @media (max-width: 480px) {
   .header {
-    font-size: 24px;  /* Smaller font size for very small screens */
-    margin-top: 20px;  /* Adjust margin */
+    font-size: 24px; /* Smaller font size for very small screens */
+    margin-top: 20px; /* Adjust margin */
   }
 }
 
@@ -378,7 +388,7 @@ a {
 }
 
 .tools_content .card:hover {
-  background-color: var(--active-hover-color)  !important;
+  background-color: var(--active-hover-color) !important;
   transition: transform 0.3s ease-in-out !important;
 }
 
@@ -400,7 +410,6 @@ a {
   color: #a8a8a8;
 }
 
-
 /* form styling */
 .contact-form {
   background-color: #2a2a2a;
@@ -416,9 +425,8 @@ a {
 }
 .contact-form input:focus,
 .contact-form textarea:focus {
-  outline: 1px solid #a259ff ;
+  outline: 1px solid #a259ff;
   border: none;
-
 }
 .contact-form input,
 .contact-form textarea,
@@ -430,7 +438,7 @@ a {
   color: #ffffff;
 }
 .contact-form input,
-.contact-form textarea{
+.contact-form textarea {
   background-color: #3a3a3a;
   margin-bottom: 20px;
 }
@@ -444,8 +452,8 @@ a {
   background-color: #8a3fff;
 }
 /* template styling */
-.templates__content .col-lg-6{
-  padding: 15px ;
+.templates__content .col-lg-6 {
+  padding: 15px;
 }
 .templates__content .card {
   background: #1e1e1e;
@@ -525,14 +533,13 @@ a {
     font-size: 3.5rem;
     margin-bottom: 0.5rem;
   }
-
 }
 @media (width < 375px) {
   .collaborate-card h1 {
     font-size: 2.5rem;
   }
-.collaborate-card p {
-  font-size: 1rem;
+  .collaborate-card p {
+    font-size: 1rem;
   }
 }
 .collaborate-card .accent-text {
@@ -562,29 +569,28 @@ a {
   width: 20px;
   height: 20px;
 }
-.hidden{
+.hidden {
   position: absolute;
-  transform: translate(-20px,20px);
+  transform: translate(-20px, 20px);
   transition: 0.3s;
   color: #8257e6;
   /* opacity: 0; */
 }
-.showing{
+.showing {
   color: #fff;
   transition: 0.3s;
 }
-.collaborate-card:hover  {
-  .hidden{
-    transform: translate(0,0);
+.collaborate-card:hover {
+  .hidden {
+    transform: translate(0, 0);
     color: #8257e6;
   }
-  .showing{
-    transform: translate(20px,-20px);
+  .showing {
+    transform: translate(20px, -20px);
     /* opacity: 0; */
     color: black;
   }
-  .arrow-icon{
+  .arrow-icon {
     background-color: #fff;
-
   }
 }
